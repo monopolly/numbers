@@ -45,11 +45,3 @@ func BenchmarkUnique(b *testing.B) {
 		UniqueUint(&slice)
 	}
 }
-
-func TestThousand(t *testing.T) {
-	a := assert.New(t)
-	_ = a
-
-	fmt.Println(Thousand100k(89421))
-	fmt.Println(Thousand100k(42189421))
-}
