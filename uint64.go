@@ -7,7 +7,6 @@ func Unit64Int64(u uint64) (a, b int64) {
 		if c > 0 {
 			b = int64(c - 1)
 		}
-
 		return
 	}
 	return int64(u), 0
