@@ -96,17 +96,12 @@ func Formats(n int) string {
 	if n < 1000 {
 		return strconv.Itoa(n)
 	}
-
 	switch {
 	case n < 1000000:
 		return fmt.Sprintf("%dk", n/1000)
-	case n < 1000000000:
+	default:
 		return fmt.Sprintf("%dm", n/1000000)
-	case n < 1000000000000:
-		return fmt.Sprintf("%db", n/1000000000)
 	}
-
-	return ""
 }
 
 //четное
