@@ -69,41 +69,6 @@ func Duration(d time.Duration) string {
 	return fmt.Sprintf("%02d:%02d", h, m)
 }
 
-func Format(n interface{}, delim ...byte) string {
-	var fo byte = ' '
-	if len(delim) > 0 {
-		fo = delim[0]
-	}
-	in := fmt.Sprint(n)
-	out := make([]byte, len(in)+(len(in)-2+int(in[0]/'0'))/3)
-	if in[0] == '-' {
-		in, out[0] = in[1:], '-'
-	}
-
-	for i, j, k := len(in)-1, len(out)-1, 0; ; i, j = i-1, j-1 {
-		out[j] = in[i]
-		if i == 0 {
-			return string(out)
-		}
-		if k++; k == 3 {
-			j, k = j-1, 0
-			out[j] = fo
-		}
-	}
-}
-
-func Formats(n int) string {
-	if n < 1000 {
-		return strconv.Itoa(n)
-	}
-	switch {
-	case n < 1000000:
-		return fmt.Sprintf("%dk", n/1000)
-	default:
-		return fmt.Sprintf("%dm", n/1000000)
-	}
-}
-
 //четное
 func Even(number interface{}) (res bool) {
 	switch number.(type) {

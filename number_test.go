@@ -11,6 +11,8 @@ func Test1(t *testing.T) {
 	a := assert.New(t)
 	_ = a
 
+	fmt.Println(Format(1253523423423552345))
+
 	v := []uint64{17086447805432677, 17086447805432677}
 	b := UintsToBytes64(v)
 	d := BytesToUints64(b)
