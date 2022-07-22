@@ -10,7 +10,7 @@ import (
 
 func Format(v int) (res string) {
 	p := message.NewPrinter(language.English)
-	return p.Sprintf("%d\n", v)
+	return p.Sprintf("%d", v)
 }
 
 func Formats(n int) string {
