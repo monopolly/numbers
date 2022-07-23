@@ -6,9 +6,9 @@ import (
 	"github.com/decred/dcrd/dcrec/secp256k1/v4"
 )
 
-func Hex2BigInt(h string) (res *big.Int) {
+func Hex2BigInt(hex string) (res *big.Int) {
 	res = new(big.Int)
-	res.SetString(h, 16)
+	res.SetString(hex, 16)
 	return
 }
 
