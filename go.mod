@@ -3,6 +3,7 @@ module github.com/monopolly/numbers
 go 1.18
 
 require (
+	github.com/decred/dcrd/dcrec/secp256k1/v4 v4.0.1
 	github.com/stretchr/testify v1.8.0
 	golang.org/x/text v0.3.7
 )
